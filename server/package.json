@@ -1,0 +1,30 @@
+{
+  "name": "phishguard-server",
+  "version": "1.0.0",
+  "description": "PhishGuard Threat Intelligence & URL Analysis Backend API",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "generate:data": "node scripts/generateDataset.js",
+    "train:model": "node scripts/trainModel.js"
+  },
+  "keywords": ["cybersecurity", "threat-intelligence", "phishing-detection", "url-analysis"],
+  "author": "PhishGuard Team",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "ioredis": "^5.4.2",
+    "mongoose": "^8.9.5",
+    "validator": "^13.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

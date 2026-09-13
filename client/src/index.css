@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* Custom Cyber Glows and Badges */
+.badge-danger-glow {
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.4) 0%, rgba(220, 38, 38, 0.15) 70%, transparent 100%);
+  border: 1px solid rgba(239, 68, 68, 0.6);
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.5), inset 0 0 15px rgba(255, 60, 60, 0.3);
+}
+
+.badge-suspicious-glow {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.35) 0%, rgba(217, 119, 6, 0.15) 70%, transparent 100%);
+  border: 1px solid rgba(245, 158, 11, 0.6);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.4), inset 0 0 10px rgba(251, 191, 36, 0.25);
+}
+
+.badge-safe-glow {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.3) 0%, rgba(5, 150, 105, 0.1) 70%, transparent 100%);
+  border: 1px solid rgba(16, 185, 129, 0.6);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.4), inset 0 0 10px rgba(52, 211, 153, 0.2);
+}
+
+/* 3D Hexagonal Faceted Danger Badge */
+.hex-badge {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+/* Glassmorphic Cyber Panels */
+.cyber-card {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 242, 254, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.cyber-card-danger {
+  border-color: rgba(239, 68, 68, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(239, 68, 68, 0.15);
+}
+
+.cyber-card-cyan {
+  border-color: rgba(0, 242, 254, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 242, 254, 0.12);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00f2fe;
+}
+
+/* Scanner Grid Background Pattern */
+.cyber-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(0, 242, 254, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 242, 254, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Radar pulse animation */
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-radar {
+  animation: radar-sweep 4s linear infinite;
+}
